@@ -1,0 +1,15 @@
+.div1 {
+	background-color: #3366cc;
+	color: white;
+}
+
+.div2 {
+	background-color: #66ff99;
+	color: #331a00;
+}
+
+.div3 {
+	background-color: #660033;
+	color: #ff0080;
+	transform: rotate(180deg);
+}
