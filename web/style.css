@@ -1,6 +1,11 @@
 body {
 	font-family: "Meera Inimai";
-	min-height: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	position: relative;
 }
 
@@ -17,4 +22,5 @@ h1 {
 	width: 80%;
 	height: 100%;
 	margin: auto;
+	flex-grow: 1;
 }
