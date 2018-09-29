@@ -9,7 +9,7 @@
 <title>Sam Knight</title>
 </head>
 
-<body class="w3-2018-limelight">
+<body class="w3-2018-red-pear">
 <!-- Navbar -->
 <div id="top" class="w3-card">
 	<div class="w3-bar w3-2018-valiant-poppy w3-display-container height100">
@@ -19,8 +19,11 @@
 		<a href="#" class="w3-bar-item w3-button">Home</a>
 		<a href="#" class="w3-bar-item w3-button">Assignments</a>
 	</div>
+	<div id="main">
+		
+	</div>
 </div>
-<div style="height: 2000px;"></div>
+
 </body>
 
 </html>

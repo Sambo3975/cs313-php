@@ -4,9 +4,15 @@ body {
 
 h1 {
 	font-family: "Monofett";
-	font-size: "60px";
+	font-size: 60px;
 }
 
 .height100 {
-	height: "100px";
+	height: 100px;
+}
+
+#main {
+	width: 80%;
+	height: 100%;
+	margin: auto;
 }
