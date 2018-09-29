@@ -12,7 +12,7 @@
 <body class="w3-2018-limelight">
 <!-- Navbar -->
 <div id="top" class="w3-card">
-	<div class="w3-bar w3-2018-valiant-poppy">
+	<div class="w3-bar w3-2018-valiant-poppy w3-display-container">
 		<h1 class="w3-display-middle">Sam Knight</h1>
 	</div>
 	<div class="w3-bar w3-2018-valiant-poppy">
