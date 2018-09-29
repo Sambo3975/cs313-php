@@ -11,7 +11,7 @@
 
 <body class="w3-2018-red-pear">
 <!-- Navbar -->
-<div id="top" class="w3-card">
+<div id="top" class="w3-container">
 	<div class="w3-bar w3-2018-valiant-poppy w3-display-container height100">
 		<h1 class="w3-display-middle">Sam Knight</h1>
 	</div>
