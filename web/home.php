@@ -19,7 +19,7 @@
 		<a href="#" class="w3-bar-item w3-button">Home</a>
 		<a href="#" class="w3-bar-item w3-button">Assignments</a>
 	</div>
-	<div id="main">
+	<div id="main" class="w3-2018-limelight">
 		
 	</div>
 </div>
