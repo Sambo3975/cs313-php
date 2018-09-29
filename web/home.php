@@ -13,7 +13,7 @@
 <!-- Navbar -->
 <div id="top" class="w3-card">
 	<div class="w3-bar w3-2018-valiant-poppy w3-display-container">
-		<h1 class="w3-display-middle">Sam Knight</h1>
+		<h1 class="w3-display-middle height100">Sam Knight</h1>
 	</div>
 	<div class="w3-bar w3-2018-valiant-poppy">
 		<a href="#" class="w3-bar-item w3-button">Home</a>
