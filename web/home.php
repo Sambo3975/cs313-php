@@ -11,12 +11,14 @@
 
 <body class="w3-2018-limelight">
 <!-- Navbar -->
-<div class="w3-bar w3-2018-valiant-poppy">
-	<h1>Sam Knight</h1>
-</div>
-<div class="w3-bar w3-2018-valiant-poppy">
-	<a href="#" class="w3-bar-item w3-button">Home</a>
-	<a href="#" class="w3-bar-item w3-button">Assignments</a>
+<div id="top" class="w3-card">
+	<div class="w3-bar w3-2018-valiant-poppy">
+		<h1 class="w3-display-middle">Sam Knight</h1>
+	</div>
+	<div class="w3-bar w3-2018-valiant-poppy">
+		<a href="#" class="w3-bar-item w3-button">Home</a>
+		<a href="#" class="w3-bar-item w3-button">Assignments</a>
+	</div>
 </div>
 <div style="height: 2000px;"></div>
 </body>
