@@ -20,7 +20,7 @@
 		<a href="#" class="w3-bar-item w3-button">Assignments</a>
 	</div>
 	<div id="main" class="w3-2018-limelight">
-		
+		<p>Test Text</p>
 	</div>
 </div>
 
