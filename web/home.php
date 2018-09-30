@@ -38,8 +38,8 @@
 			<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
 		</div>
 	</div>
-	<div id="footer" class="w3-container w3-valiant-poppy">
-		<p>&copy; Sam Knight <?php echo date()->format('%Y') ?></p>
+	<div id="footer" class="w3-container w3-2018-valiant-poppy">
+		<p>&copy; Sam Knight, <?php echo date('Y'); ?></p>
 	</div>
 </div>
 
