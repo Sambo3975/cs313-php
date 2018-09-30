@@ -13,8 +13,10 @@
 <!-- Navbar -->
 <div class="wrapper">
 	<?php include 'header.php'; ?>
-	<h1>Assignments</h1>
-	<p>No Assignments Yet</p>
+	<div id="main" class="w3-2018-limelight w3-container">
+		<h1>Assignments</h1>
+		<p>No Assignments Yet</p>
+	</div>
 	<?php include 'footer.php'; ?>
 </div>
 
