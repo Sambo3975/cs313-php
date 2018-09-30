@@ -23,7 +23,7 @@
 	</div>
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>About Me</h1>
-		<div class="w3-card w3-valiant-poppy why-are-inline-styles-banned">
+		<div class="w3-card w3-2018-valiant-poppy why-are-inline-styles-banned">
 			<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
 			<p><b>Born:</b> Oct. 17, 1997</p>
 			<p><b>Age: </b><?php
@@ -35,7 +35,11 @@
 			<p><b>From:</b> Lovelock, NV</p>
 			<p><b>Major:</b> Computer Science</p>
 			<p><b>Hobbies:</b> Singing, Gaming, Programming, Game Design</p>
+			<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
 		</div>
+	</div>
+	<div id="footer" class="w3-container w3-valiant-poppy">
+		<p>&copy; Sam Knight <?php echo date()->format('%Y') ?></p>
 	</div>
 </div>
 

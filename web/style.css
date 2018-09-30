@@ -36,3 +36,8 @@ h1 {
 	margin: auto;
 	flex-grow: 1;
 }
+
+#footer {
+	text-align: center;
+	height: 60px;
+}
