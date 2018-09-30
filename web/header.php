@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-card w3-2018-limelight" style="display:none" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-card-4 w3-2018-red-pear" style="display:none" id="mySidebar">
   <button onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-2018-valiant-poppy">Close &times;</button>
   <p class="w3-bar-item">No Assignments Yet</p>
 	<a href="assignments.php" class="w3-button w3-bar-item">Go to Page</a>
