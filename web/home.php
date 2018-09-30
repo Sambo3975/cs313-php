@@ -21,7 +21,8 @@
 			<a href="#" class="w3-bar-item w3-button">Assignments</a>
 		</div>
 	</div>
-	<div id="main" class="w3-2018-limelight w3-container">
+	<div class="w3-quarter"></div>
+	<div id="main" class="w3-2018-limelight w3-container w3-half">
 		<h1>About Me</h1>
 		<div class="w3-card w3-2018-valiant-poppy why-are-inline-styles-banned">
 			<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
@@ -38,6 +39,7 @@
 			<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
 		</div>
 	</div>
+	<div class="w3-quarter"></div>
 	<div id="footer" class="w3-container w3-2018-valiant-poppy">
 		<p>&copy; Sam Knight, <?php echo date('Y'); ?></p>
 	</div>
