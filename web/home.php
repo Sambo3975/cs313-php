@@ -12,15 +12,7 @@
 <body class="w3-2018-red-pear">
 <!-- Navbar -->
 <div class="wrapper">
-	<div id="top">
-		<div class="w3-bar w3-2018-valiant-poppy w3-display-container height100">
-			<h1 class="w3-display-middle">Sam Knight</h1>
-		</div>
-		<div class="w3-bar w3-2018-valiant-poppy">
-			<a href="#" class="w3-bar-item w3-button">Home</a>
-			<a href="#" class="w3-bar-item w3-button">Assignments</a>
-		</div>
-	</div>
+	<?php include 'header.php'; ?>
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>About Me</h1>
 		<div class="w3-row">
@@ -42,9 +34,7 @@
 			<div class="w3-quarter">&#8203;</div>
 		</div>
 	</div>
-	<div id="footer" class="w3-container w3-2018-valiant-poppy">
-		<p>&copy; Sam Knight, <?php echo date('Y'); ?></p>
-	</div>
+	<?php include 'footer.php'; ?>
 </div>
 
 </body>
