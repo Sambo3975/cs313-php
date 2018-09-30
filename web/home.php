@@ -23,10 +23,8 @@
 	</div>
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>About Me</h1>
-		<div class="w3-container w3-threequarter">
-			<img src="img/sam_photo.jpg" alt="Picture of me"/>
-		</div>
-		<div class="w3-rest">
+		<div class="w3-card">
+			<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
 			<p><b>Born:</b> Oct. 17, 1997</p>
 			<p><b>Age: </b><?php
 				$dob = new DateTime('1997-10-17');
