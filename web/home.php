@@ -24,7 +24,7 @@
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>About Me</h1>
 		<div class="w3-row">
-			<div class="w3-quarter"></div>
+			<div class="w3-quarter">&nspb;</div>
 			<div class="w3-card w3-2018-valiant-poppy w3-half why-are-inline-styles-banned">
 				<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
 				<p><b>Born:</b> Oct. 17, 1997</p>
@@ -39,7 +39,7 @@
 				<p><b>Hobbies:</b> Singing, Gaming, Programming, Game Design</p>
 				<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
 			</div>
-			<div class="w3-quarter"></div>
+			<div class="w3-quarter">&nspb;</div>
 		</div>
 	</div>
 	<div id="footer" class="w3-container w3-2018-valiant-poppy">
