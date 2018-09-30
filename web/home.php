@@ -21,24 +21,22 @@
 			<a href="#" class="w3-bar-item w3-button">Assignments</a>
 		</div>
 	</div>
-	<div class="w3-row">
+	<div id="main" class="w3-2018-limelight w3-container w3-row">
+		<h1>About Me</h1>
 		<div class="w3-quarter"></div>
-		<div id="main" class="w3-2018-limelight w3-container w3-half">
-			<h1>About Me</h1>
-			<div class="w3-card w3-2018-valiant-poppy why-are-inline-styles-banned">
-				<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
-				<p><b>Born:</b> Oct. 17, 1997</p>
-				<p><b>Age: </b><?php
-					$dob = new DateTime('1997-10-17');
-					$today = new DateTime("now");
-					$diff = $dob->diff($today);
-					echo $diff->format('%Y years');
-				?></p>
-				<p><b>From:</b> Lovelock, NV</p>
-				<p><b>Major:</b> Computer Science</p>
-				<p><b>Hobbies:</b> Singing, Gaming, Programming, Game Design</p>
-				<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
-			</div>
+		<div class="w3-card w3-2018-valiant-poppy why-are-inline-styles-banned">
+			<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
+			<p><b>Born:</b> Oct. 17, 1997</p>
+			<p><b>Age: </b><?php
+				$dob = new DateTime('1997-10-17');
+				$today = new DateTime("now");
+				$diff = $dob->diff($today);
+				echo $diff->format('%Y years');
+			?></p>
+			<p><b>From:</b> Lovelock, NV</p>
+			<p><b>Major:</b> Computer Science</p>
+			<p><b>Hobbies:</b> Singing, Gaming, Programming, Game Design</p>
+			<p><b>Interests:</b> Star Wars, Marvel, The Legend of Zelda, Super Mario Bros.</p>
 		</div>
 		<div class="w3-quarter"></div>
 	</div>
