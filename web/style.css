@@ -19,6 +19,10 @@ h1 {
 	text-align: center;
 }
 
+.why-are-inline-styles-banned {
+	height: 447px; /* Seriously, why? This is a one-off height setting for a specific image. Much more suited for inline styling than this. */
+}
+
 .height100 {
 	height: 100px;
 }

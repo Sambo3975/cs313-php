@@ -23,7 +23,7 @@
 	</div>
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>About Me</h1>
-		<div class="w3-card">
+		<div class="w3-card w3-valiant-poppy why-are-inline-styles-banned">
 			<img src="img/sam_photo.jpg" alt="Picture of me" class="float-left"/>
 			<p><b>Born:</b> Oct. 17, 1997</p>
 			<p><b>Age: </b><?php
