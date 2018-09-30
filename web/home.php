@@ -29,10 +29,10 @@
 		<div class="w3-rest">
 			<p><b>Born:</b> Oct. 17, 1997</p>
 			<p><b>Age: </b><?php
-				$dob = new DateTime('1997-10-17')
-				$today = new DateTime("now")
-				$diff = $dob->diff($today)
-				echo $diff->format('%Y years')
+				$dob = new DateTime('1997-10-17');
+				$today = new DateTime("now");
+				$diff = $dob->diff($today);
+				echo $diff->format('%Y years');
 			?></p>
 			<p><b>From:</b> Lovelock, NV</p>
 			<p><b>Major:</b> Computer Science</p>
