@@ -1,0 +1,25 @@
+#div1 {
+	background-color: #3366cc;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+}
+
+#div2 {
+	background-color: #66ff99;
+	color: #331a00;
+	font-size: 1.75em;
+	text-align: center;
+}
+
+#div3 {
+	background-color: #660033;
+	color: #ff0080;
+	transform: rotate(180deg);
+	font-size: 1.5em;
+	text-align: center;
+}
+
+div:hover {
+	font-weight: bold;
+}

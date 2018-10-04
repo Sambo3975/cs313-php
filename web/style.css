@@ -1,0 +1,43 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: "Meera Inimai";
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+}
+
+h1 {
+	font-family: "Monofett";
+	font-size: 60px;
+	text-align: center;
+}
+
+.why-are-inline-styles-banned {
+	height: 447px; /* Seriously, why? This is a one-off height setting for a specific image. Much more suited for inline styling than this. */
+}
+
+.height100 {
+	height: 100px;
+}
+
+.float-left {
+	float: left;
+}
+
+#main {
+	width: 75%;
+	margin: auto;
+	flex-grow: 1;
+}
+
+#footer {
+	text-align: center;
+	height: 60px;
+}
