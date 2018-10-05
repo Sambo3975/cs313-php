@@ -9,7 +9,7 @@ body {
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	min-height: 100%;
 	position: relative;
 }
 
@@ -19,8 +19,22 @@ h1 {
 	text-align: center;
 }
 
-.why-are-inline-styles-banned {
-	height: 447px; /* Seriously, why? This is a one-off height setting for a specific image. Much more suited for inline styling than this. */
+.about-me-card {
+	width: 100%;
+	margin: auto;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.about-me-card div {
+	display: inline;
+	width: 50%;
+}
+
+.responsive-image {
+	width: inherit;
+	max-width: 391px;
+	float: left;
 }
 
 .height100 {
