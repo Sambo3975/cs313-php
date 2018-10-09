@@ -1,0 +1,272 @@
+
+/* Stuff copied for all pages */
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	position: relative;
+}
+
+#return-to-main {
+	text-decoration: none;
+	position: relative;
+	top: 23px;
+}
+
+#return-to-main:hover {
+	color:#fff;
+	background-color:#BD3D3A;
+}
+
+#main {
+	width: 75%;
+	margin: auto;
+	flex-grow: 1;
+}
+
+#footer {
+	text-align: center;
+	height: 60px;
+}
+
+/* Stuff for this page */
+
+#nav {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#view-cart {
+	font-size: 30px;
+	/* transform:  */
+}
+
+h1 {
+	font-family: 'Press Start 2P', monospace;
+}
+
+.product-tile {
+	width: 182px;
+	padding: 16px;
+	margin: 8px;
+	display: inline-block;
+}
+
+.game-thumb {
+	width: 150px;
+	height: 100px;
+}
+
+.nospace {
+	text-align: center;
+	margin: 0px;
+}
+
+/* Add to cart report panel */
+
+#add-to-cart-notification {
+	color: white;
+	background-color: #00cc99;
+	padding: 16px;
+	opacity: 0
+}
+
+/* Dropdown (holy cow) */
+
+.dropdown div:first-child {
+	display: inline-block;
+	width: 120px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	padding-left: 8px;
+	background-color: #f0e68c;
+}
+
+.dropdown div:last-child {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	color: white;
+	background-color: #00cc99;
+	cursor: pointer;
+}
+
+.dropdown div:last-child:hover {
+	color: black;
+	background-color: #ccc;
+}
+
+.dropdown-selection {
+	display: none;
+	position: relative;
+	height: 0px;
+}
+
+.dropdown-selection p {
+	cursor: pointer;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: absolute;
+	width: 150px;
+	background-color: white;
+	padding-left: 8px;
+	z-index: 10;
+}
+
+.dropdown-selection p:hover {
+	background-color: #ccc !important;
+}
+
+.qty {
+	float: left;
+	margin-right: 4px;
+	margin-top: 4px;
+}
+
+/* Description button */
+
+.description-button {
+	position: relative;
+	text-align: center;
+	padding: 0px 8px;
+	margin: 4px 0px;
+	border-radius: 8px;
+	color: white;
+	background-color: #00cc99;
+	cursor: pointer;
+}
+
+.description-button:hover {
+	color: black;
+	background-color: #ccc;
+}
+
+.description {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 300px;
+	padding: 8px;
+	border-radius: 8px;
+	background-color: white;
+	color: black;
+	text-align: left;
+	z-index: 10;
+}
+
+/* Spinner */
+
+.spinner {
+	margin-top: 4px;
+}
+
+.spinner .left {
+	width: 30px;
+	display: inline-block;
+	border-radius: 8px 0px 0px 8px;
+	color: white;
+	background-color: #00cc99;
+	text-align: center;
+	cursor: pointer;
+}
+
+.spinner .left:hover {
+	color: black;
+	background-color: #ccc;
+}
+
+.spinner .label {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	background-color: #f0e68c;
+}
+
+.spinner .right {
+	width: 30px;
+	display: inline-block;
+	border-radius: 0px 8px 8px 0px;
+	color: white;
+	background-color: #00cc99;
+	text-align: center;
+	cursor: pointer;
+}
+
+.spinner .right:hover {
+	color: black;
+	background-color: #ccc;
+}
+
+/* Order Form */
+
+#order-form {
+	display: none;
+}
+
+/* Purchase list */
+
+.game-thumb-small {
+	width: 75px;
+	height: 50px;
+}
+
+.rem-btn {
+	cursor: pointer;
+}
+
+#purchase-list {
+	width: 100%;
+	max-width: 800px;
+	font-size: 20px;
+}
+
+#purchase-list th {
+	text-align: left;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.right {
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.large {
+	font-size: 30px;
+}
+
+#empty-cart-message {
+	display: none;
+	color: white;
+	background-color: #00cc99;
+	padding: 16px;
+}
+
+#option-buttons {
+	margin: auto;
+	width: 30%;
+}
+
+#return-to-browse, #checkout {
+	width: 50%;
+	color: white;
+	background-color: #00cc99;
+	border-radius: 16px;
+}

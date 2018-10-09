@@ -15,7 +15,9 @@
 	<?php include 'header.php'; ?>
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>Assignments</h1>
-		<p>No Assignments Yet</p>
+		<div class="button-array">
+			<a href="w3/index.php" class="w3-button w3-2018-valiant-poppy w3-bar w3-round">W3 - Shopping Cart</a>
+		</div>
 	</div>
 	<?php include 'footer.php'; ?>
 </div>

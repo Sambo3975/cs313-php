@@ -13,10 +13,26 @@ body {
 	position: relative;
 }
 
+#main {
+	width: 75%;
+	margin: auto;
+	flex-grow: 1;
+}
+
+#footer {
+	text-align: center;
+	height: 60px;
+}
+
 h1 {
 	font-family: "Monofett";
 	font-size: 60px;
 	text-align: center;
+}
+
+.button-array {
+	width: 50%;
+	margin: auto;
 }
 
 .about-me-card {
@@ -43,15 +59,4 @@ h1 {
 
 .float-left {
 	float: left;
-}
-
-#main {
-	width: 75%;
-	margin: auto;
-	flex-grow: 1;
-}
-
-#footer {
-	text-align: center;
-	height: 60px;
 }
