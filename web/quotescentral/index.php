@@ -11,9 +11,9 @@
 <div class="wrapper">
 	<?php include 'header.php'; ?>	
 	<div id="main" class="w3-container">
-		
+		<p>Main page coming soon</p>
+		<a href="search.php">Go to Search page</a>
 	</div>
 	<?php include 'footer.php'; ?>
 </div>
 </body>
-</html>

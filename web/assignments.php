@@ -16,7 +16,8 @@
 	<div id="main" class="w3-2018-limelight w3-container">
 		<h1>Assignments</h1>
 		<div class="button-array">
-			<a href="w3/index.php" class="w3-button w3-2018-valiant-poppy w3-bar w3-round">W3 - Shopping Cart</a>
+			<a href="w3/" class="w3-button w3-2018-valiant-poppy w3-bar w3-round w3-margin">Shopping Cart</a>
+			<a href="quotescentral/" class="w3-button w3-2018-valiant-poppy w3-bar w3-round w3-margin">Quotes Central</a>
 		</div>
 	</div>
 	<?php include 'footer.php'; ?>

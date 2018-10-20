@@ -1,3 +1,6 @@
+-- Run script with this part to "factory reset" the database
+DROP TABLE media, categories, quotes;
+
 -- Media
 -- Valid values for the medium from which a quote can originate and their html classes
 CREATE TABLE media (
@@ -10,10 +13,10 @@ INSERT INTO media VALUES( 'Book',               'book'       );
 INSERT INTO media VALUES( 'General Conference', 'conference' );
 INSERT INTO media VALUES( 'Magazine',           'magazine'   );
 INSERT INTO media VALUES( 'Movie',              'movie'      );
-INSERT INTO media VALUES( 'News'   ,            'news'       );
+INSERT INTO media VALUES( 'Newspaper'   ,        'newspaper' );
 INSERT INTO media VALUES( 'Scripture',          'scripture'  );
 INSERT INTO media VALUES( 'TV Show',            'tv'         );
-INSERT INTO media VALUES( 'Other',              'other'      );
+INSERT INTO media VALUES( 'Other',              'zz-other'   );
 
 -- Categories
 CREATE TABLE categories (
@@ -24,7 +27,7 @@ CREATE TABLE categories (
 INSERT INTO categories VALUES( 'Humor',            'humor'         );
 INSERT INTO categories VALUES( 'Inspirational',    'inspirational' );
 INSERT INTO categories VALUES( 'Interesting Fact', 'fact'          );
-INSERT INTO categories VALUES( 'Other',            'other'         );
+INSERT INTO categories VALUES( 'Other',            'zz-other'      );
 INSERT INTO categories VALUES( 'Religious',        'religious'     );
 
 -- Quotes
@@ -49,4 +52,4 @@ INSERT INTO quotes (quote, attribution, source,      medium,  category,       su
 
 INSERT INTO quotes (quote, attribution, source,      medium,  category,       submitter,   submissionDate)
 	VALUES ('And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them.',
-		'Nephi', '1 Nephi 3:7', 'Book', 'Religious', 'Sam Knight', '2018-10-13');
+		'Nephi', '1 Nephi 3:7', 'Scripture', 'Religious', 'Sam Knight', '2018-10-13');

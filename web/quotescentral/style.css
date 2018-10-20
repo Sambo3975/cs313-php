@@ -1,0 +1,55 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: "Open Sans Condensed:300";
+	color: white;
+	background-color: #222222;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	position: relative;
+}
+
+#main {
+	width: 75%;
+	margin: auto;
+	flex-grow: 1;
+}
+
+#footer {
+	text-align: center;
+	height: 60px;
+}
+
+/* Stuff for this page */
+
+.list {
+	display: inline-block;
+	top: inherit;
+}
+
+#search, #results {
+	float: left;
+}
+
+textarea {
+	max-width: 100%;
+}
+
+textarea, input {
+	background-color:#fdf5e6;
+	border-radius: 8px;
+}
+
+.bottom-pad {
+	padding-bottom: 16px;
+}
+
+/* .quote { */
+	/* padding-bottom: 30px; */
+/* } */
