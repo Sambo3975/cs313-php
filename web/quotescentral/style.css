@@ -46,6 +46,11 @@ textarea, input {
 	border-radius: 8px;
 }
 
+.option {
+	margin: 16px;
+	border-radius: 8px;
+}
+
 .bottom-pad {
 	padding-bottom: 16px;
 }

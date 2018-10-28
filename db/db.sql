@@ -1,55 +1,70 @@
+-- Reset User Table
 -- Run script with this part to "factory reset" the database
-DROP TABLE media, categories, quotes;
+DROP TABLE quotes, media, categories, quote_users;
+
+CREATE TABLE quote_users (
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(31) NOT NULL,
+	password VARCHAR(31) NOT NULL,
+	isAdmin BOOLEAN NOT NULL,
+	name VARCHAR(31)
+);
+
+INSERT INTO quote_users (username, password, isAdmin, name)
+	VALUES ('Sambo', '$50PointsToGryffind0r$', TRUE, 'Sam Knight');
+	
+INSERT INTO quote_users (username, password, isAdmin)
+	VALUES ('Tony Stank', 'RunninOverFatKids', FALSE);
 
 -- Media
 -- Valid values for the medium from which a quote can originate and their html classes
 CREATE TABLE media (
-	name VARCHAR(32) primary key,	-- labels that appear on radio buttons
-	tag  VARCHAR(32)				-- html class
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(31)	-- labels that appear on radio buttons
 );
---                         name                  tag
-INSERT INTO media VALUES( 'A Friend',           'friend'     );
-INSERT INTO media VALUES( 'Book',               'book'       );
-INSERT INTO media VALUES( 'General Conference', 'conference' );
-INSERT INTO media VALUES( 'Magazine',           'magazine'   );
-INSERT INTO media VALUES( 'Movie',              'movie'      );
-INSERT INTO media VALUES( 'Newspaper'   ,        'newspaper' );
-INSERT INTO media VALUES( 'Scripture',          'scripture'  );
-INSERT INTO media VALUES( 'TV Show',            'tv'         );
-INSERT INTO media VALUES( 'Other',              'zz-other'   );
+--                                name
+INSERT INTO media (name) VALUES( 'A Friend');
+INSERT INTO media (name) VALUES( 'Book');
+INSERT INTO media (name) VALUES( 'General Conference');
+INSERT INTO media (name) VALUES( 'Magazine');
+INSERT INTO media (name) VALUES( 'Movie');
+INSERT INTO media (name) VALUES( 'Newspaper');
+INSERT INTO media (name) VALUES( 'Scripture');
+INSERT INTO media (name) VALUES( 'TV Show');
+INSERT INTO media (name) VALUES( 'Other');
 
 -- Categories
 CREATE TABLE categories (
-	name VARCHAR(32) primary key,
-	tag  VARCHAR(32)
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(31)
 );
---                              name                tag
-INSERT INTO categories VALUES( 'Humor',            'humor'         );
-INSERT INTO categories VALUES( 'Inspirational',    'inspirational' );
-INSERT INTO categories VALUES( 'Interesting Fact', 'fact'          );
-INSERT INTO categories VALUES( 'Other',            'zz-other'      );
-INSERT INTO categories VALUES( 'Religious',        'religious'     );
+--                                     name
+INSERT INTO categories (name) VALUES( 'Humor');
+INSERT INTO categories (name) VALUES( 'Inspirational');
+INSERT INTO categories (name) VALUES( 'Interesting Fact');
+INSERT INTO categories (name) VALUES( 'Religious');
+INSERT INTO categories (name) VALUES( 'Other');
 
 -- Quotes
 CREATE TABLE quotes (
-	id          SERIAL primary key,
-	quote       TEXT,
-	attribution VARCHAR(32),
-	source      VARCHAR(32),
-	medium      VARCHAR(32) REFERENCES media(name),
-	category    VARCHAR(32) REFERENCES categories(name),
-	submitter   VARCHAR(32),
+	id       SERIAL primary key,
+	quote          TEXT NOT NULL,
+	attribution    VARCHAR(31) NOT NULL,
+	source         VARCHAR(31) NOT NULL,
+	medium_id      INT REFERENCES media(id) NOT NULL,
+	category_id    INT REFERENCES categories(id) NOT NULL,
+	user_id        INT REFERENCES quote_users(id) NOT NULL,
 	submissionDate DATE
 );
 
-INSERT INTO quotes (quote, attribution, source, medium, category, submitter, submissionDate)
+INSERT INTO quotes (quote, attribution, source, medium_id, category_id, user_id, submissionDate)
 	VALUES ('Do or do not. There is no try.',
-		'Yoda', 'Star Wars', 'Movie', 'Inspirational', 'Sam Knight', '2018-10-13');
+		'Yoda', 'Star Wars', 5, 2, 1, '2018-10-13');
 
-INSERT INTO quotes (quote, attribution, source,      medium,  category,       submitter,   submissionDate)
+INSERT INTO quotes (quote, attribution, source, medium_id, category_id, user_id, submissionDate)
 	VALUES ('You''re making me beat up grass!',
-		'Rocket the Raccoon', 'Guardians of the Galaxy', 'Movie', 'Humor', 'Sam Knight', '2018-10-13');
+		'Rocket the Raccoon', 'Guardians of the Galaxy', 5, 1, 2, '2018-10-13');
 
-INSERT INTO quotes (quote, attribution, source,      medium,  category,       submitter,   submissionDate)
+INSERT INTO quotes (quote, attribution, source, medium_id, category_id, user_id, submissionDate)
 	VALUES ('And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them.',
-		'Nephi', '1 Nephi 3:7', 'Scripture', 'Religious', 'Sam Knight', '2018-10-13');
+		'Nephi', '1 Nephi 3:7', 7, 4, 1, '2018-10-13');

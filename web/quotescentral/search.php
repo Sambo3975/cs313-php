@@ -7,12 +7,12 @@ require "load-db.php";
 $db = loadDatabase();
 
 # Fetch categories
-$query = $db->prepare('SELECT name, tag FROM categories ORDER BY tag');
+$query = $db->prepare('SELECT id, name FROM categories ORDER BY id');
 $query->execute();
 $categories = $query->fetchAll();
 
 # Fetch media
-$query = $db->prepare('SELECT name, tag FROM media ORDER BY tag');
+$query = $db->prepare('SELECT id, name FROM media ORDER BY id');
 $query->execute();
 $media = $query->fetchAll();
 
@@ -23,21 +23,18 @@ function trim_value(&$value) {
 array_filter($_GET, 'trim_value');
 
 # Prepare query
-$queryString = "SELECT quote, attribution, source, medium, category, submitter, submissionDate FROM quotes";
+$queryString = "SELECT q.quote, q.attribution, q.source, q.submissionDate, u.username, u.name FROM quotes q, quote_users u WHERE q.user_id = u.id";
 $whereClause = false;
 foreach ($_GET as $k => $v) {
 	$k = filter_var($k, FILTER_SANITIZE_STRING);
 	$v = filter_var($v, FILTER_SANITIZE_STRING);
 	
 	if ($v != "") {
-		if (!$whereClause) {
-			$queryString = $queryString . " WHERE ";
-			$whereClause = true;
-		} else {
-			$queryString = $queryString . " AND ";
+		$queryString = $queryString . " AND ($k = '$v'";
+		if ($k == 'username') {
+			$queryString = $queryString . " OR u.name = '$v'";
 		}
-		
-		$queryString = $queryString . "$k = '$v'";
+		$queryString = $queryString . ")";
 	}
 }
 
@@ -46,6 +43,7 @@ foreach ($_GET as $k => $v) {
 $query = $db->prepare($queryString);
 $query->execute();
 $results = $query->fetchAll();
+
 ?>
 
 <head>
@@ -59,7 +57,7 @@ $results = $query->fetchAll();
 	<?php include 'header.php'; ?>
 	<div id="main" class="w3-container w3-row">
 		<form id="search" class="w3-container w3-half" action="search.php">
-			<h2>Filter Quotes</h2>
+			<h1>Filter Quotes</h1>
 			<div class="w3-container w3-blue w3-card-4 bottom-pad">
 				<div class="w3-bar">
 					<div class="w3-bar-item">
@@ -67,7 +65,8 @@ $results = $query->fetchAll();
 						<?php
 							foreach ($categories as $category) {
 								$name = $category['name'];
-								echo "<input type='radio' class='w3-radio' name='category' value='$name'> $name <br/>";
+								$id = $category['id'];
+								echo "<input type='radio' class='w3-radio' name='category_id' value='$id'> $name <br/>";
 							}
 						?>
 					</div>
@@ -77,7 +76,8 @@ $results = $query->fetchAll();
 						<?php
 							foreach ($media as $medium) {
 								$name = $medium['name'];
-								echo "<input type='radio' class='w3-radio' name='medium' value='$name'> $name <br/>";
+								$id = $medium['id'];
+								echo "<input type='radio' class='w3-radio' name='medium_id' value='$id'> $name <br/>";
 							}
 						?>
 					</div>
@@ -93,7 +93,7 @@ $results = $query->fetchAll();
 						<input type="text" class="w3-input w3-border-0"  name="submissionDate" id="submissionDate"/><br/>
 					
 						<label for="submitter"><b>Submitted By:</b></label><br/>
-						<input type="text" class="w3-input w3-border-0"  name="submitter" id="submitter"/><br/>
+						<input type="text" class="w3-input w3-border-0"  name="username" id="username"/><br/>
 					</div>
 				</div>
 				
@@ -105,13 +105,16 @@ $results = $query->fetchAll();
 		</form>
 		
 		<div id="results" class="w3-container w3-half">
-			<h2>Quotes</h2>
+			<h1>Quotes</h1>
 			<?php
 				foreach ($results as $result) {
 					$quote = $result['quote'];
 					$attribution = $result['attribution'];
 					$source = $result['source'];
-					$submitter = $result['submitter'];
+					$submitter = $result['name'];
+					if ($submitter == "") {
+						$submitter = $result['username'];
+					}
 					$submissionDate = $result['submissiondate'];
 					echo "<div class='w3-panel w3-leftbar w3-sand w3-card-4'>";
 					echo   "<p class='w3-xlarge w3-serif quote'>$quote</p>";

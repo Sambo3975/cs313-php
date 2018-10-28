@@ -10,9 +10,12 @@
 <body>
 <div class="wrapper">
 	<?php include 'header.php'; ?>	
-	<div id="main" class="w3-container">
-		<p>Main page coming soon</p>
-		<a href="search.php">Go to Search page</a>
+	<div id="main" class="w3-panel">
+		<h1>Welcome to Quotes Central!</h1>
+		<div class="w3-bar">
+			<a href="search.php" class="w3-button w3-blue option">Search Quotes</a>
+			<a href="add.php" class="w3-button w3-blue option">Add a Quote</a>
+		</div>
 	</div>
 	<?php include 'footer.php'; ?>
 </div>
