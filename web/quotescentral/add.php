@@ -55,12 +55,10 @@ if (isset($_POST['source'])) {
 	if ($error) {
 		$message .= '.';
 	} else {
-		$addition = $db->prepare($fields . ", user_id" . $values . ", 2)");
-		echo $fields . ", user_id, submissiondate" . $values . ", '2', '" . date("Y-m-d") . "')";
+		$addition = $db->prepare($fields . ", user_id, submissionDate" . $values . ", 2, '" . date("Y-m-d") . "')");
 		$addition->execute();
 		$message = "New quote successfully added.";
 	}
-	echo $message . " " . date("Y-m-d");
 }
 ?>
 
