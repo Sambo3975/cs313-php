@@ -64,7 +64,7 @@ if ($search) {
 <div class="wrapper">
 	<?php include 'header.php'; ?>
 	<div id="main" class="w3-container w3-row">
-		<form id="search" class="w3-container w3-half" action="search.php">
+		<form id="search" class="w3-container w3-half" action="index.php">
 			<h1>Filter Quotes</h1>
 			<div class="w3-container w3-blue w3-card-4 bottom-pad">
 				<div class="w3-bar">
